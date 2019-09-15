@@ -1,0 +1,49 @@
+{
+"data": {
+"train_root": "../data/binary_lane_bdd/Images/",
+"label_root": "../data/binary_lane_bdd/Labels/",
+"train_data":"../data/x_train.txt",
+"valid_data":"../data/x_val.txt",
+"input_channels": 3,
+"num_classes": 2,
+"total_images": 450
+},
+
+"train":{
+"epochs": 200,
+"width": 224,
+  "height": 224,
+"batch_size": 32,
+
+"loss": "weighed_ce_loss",
+"loss_kwargs" : {"weights":[100,1]},
+"optim": "adam",
+"optim_kwargs":{
+"lr": 0.0001,
+"momentum":0.9,
+"nesterov":false,
+"weight_decay": 0.0005
+},
+"sched_name": "sgdr",
+"sched_kwargs": {"t_actual": 1, "t_mul": 2, "lr_max": 0.0005, "lr_min": 0.00000005, "decay": 1}
+,
+"use_pretrained_weights_loc": null,
+"resume_training":null,
+"metric": "f_score",
+"metric_kwargs": {"beta_score": 2, "threshold": 0.5}
+
+},
+"device": {
+    "use_gpu": true,
+    "use_data_parallel": false,
+    "device_ids": [1],
+    "use_visdom": false
+},
+"model_stuff": {
+    "exp_name": "exp2_lane"
+},
+"arch":{
+    "arch_name": "enet",
+    "arch_kwargs": {"imbalance":true, "pretrained": false}
+    }
+}

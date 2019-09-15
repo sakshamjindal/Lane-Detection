@@ -1,0 +1,9 @@
+exp_name	arch_name	pretrained_on	loss_name	loss_weights	lr_scheduler_name	optimizer_name	train_iou	train_loss	val_iou	val_loss
+exp1_lane	deeplabv3	Imagenet	weighed_ce_loss	1:200	sgdr	adam	0.04196	0.28467	0.03435	0.34493
+exp2_lane	enet	TuSimple	weighed_ce_loss	1:200	sgdr	sgd	0.03269	0.48446	0.03774	0.30949
+exp3_lane	scnn	CULane	weighed_ce_loss	1:100	sgdr	sgd	0.16097	0.20345	0.07659	0.19820
+exp4_lane	scnn	CULane	dice	1:500	sgdr	sgd	0.00678	0.99980	0.02524	0.99996
+exp5_lane	deeplabv3	Imagenet	weighed_ce_loss	1:200	StepLR	adam	0.04247	0.35033	0.03433	0.30765
+exp6_lane	erfnet	CityScape	weighed_ce_loss	1:100	sgdr	sgd	0.16367	0.11841	0.08270	0.19564
+exp7_lane	erfnet	CityScape	weighed_ce_loss	1:25	sgdr	sgd	0.22743	0.09301	0.19364	0.22018
+exp8_lane	scnn	CULane	weighed_ce_loss	1:25	sgdr	sgd	0.21985	0.14080	0.18764	0.22438
