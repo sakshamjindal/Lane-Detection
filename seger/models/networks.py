@@ -73,9 +73,5 @@ def get_network(input_channels, num_classes, model_name, kwargs):
         model.decoder.output_conv = (nn.ConvTranspose2d(16, num_classes, 2, stride=2, padding=0, output_padding=0, bias=True))        
         return model
             
-        
-#     if(cfg["arch"]["arch_name"]=="unet"):
-#         return UNet(num_classes=cfg["data"]["num_classes"])
-
-#     elif(cfg["arch"]["arch_name"]=="enet"):
-#         return ENet(num_classes=cfg["data"]["num_classes"])
+    else:
+        raise NotImplementedError("This is not implemented yet.. Raise pull request")    
