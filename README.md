@@ -14,7 +14,7 @@ Real-time Semantic Segmentation](http://www.robesafe.es/personal/eduardo.romera/
 
 - [`train.py`](train.py) : Python code for training the algorithm with different configurations that can be specified in the config files
 - [`trainer.py`](trainer.py) : A helper function that is called by the above file
-- [`exp_result_summary.csv`](exp_result_summary.csv) : A summary of 8 experiments that have been carried by a combination of network achitectures, loss functions and their weighing scheme
+- [`exp_result_summary.txt`](exp_result_summary.txt) : A summary of 8 experiments that have been carried by a combination of network achitectures, loss functions and their weighing scheme
 - [`pretrained_backbone`](pretrained_backbone) : Contains different models that had been trained on similar datasets - TuSimple and CuLane. A transfer learning approach has been applied here
 - [`seger`](seger) : folder containing the backbone of the semantic segmentation pipeline
 - [`Notebooks`](Notebooks) : Contains inference and experiment analysis modules as jupyter notebooks. Accepts the experiment config file (json file inside cfgs folder) as inputs and generate visualisation of outputs and calcualates experiment losses and accuracies
